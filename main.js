@@ -74,7 +74,7 @@ updateDataMap(singiture)
 function player(id = 0, name = "BOT", clr = 'purple') {
     let gfe = false;
     let q_obj = {
-            name: arab ? '﷽'.repeat(5) : name, //+ `[${id}]`,
+            name: arab ? '﷽'.repeat(17) : name, //+ `[${id}]`,
             characterId: arab ? 'yellow' : clr
         },
         query = Object.entries(q_obj);
