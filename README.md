@@ -4,7 +4,7 @@ try to take over the world!
 
 ## Installation
 
-Use the package manager [npm] to install foobar.
+Use the node package manager (npm) to install Witz.io bots!
 
 ```bash
 npm i text-decoding ws
