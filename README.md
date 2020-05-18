@@ -1,7 +1,7 @@
 # Witz.io
 
-try to take over the world!
-Play [Wits](https://witz.io/)!
+try to take over the world! 
+Play [Witz](https://witz.io/)!
 
 ## Installation
 
