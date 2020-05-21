@@ -8,7 +8,7 @@ Play [Witz](https://witz.io/)!
 Use the node package manager (npm) to install Witz.io bots!
 
 ```bash
-npm i text-decoding ws
+npm i colors text-decoding ws
 ```
 
 ## License
