@@ -14,7 +14,12 @@ let cm1 = [
     `Who's going to cary the child?`,
     `Relatable!`,
     "My cock is throbbing like the starving blacks in africa",
-    "condoms help protect against corona virus"
+    "condoms help protect against corona virus",
+    "I'm not gay my boyfriend is",
+    "I'm only half gay... only half a nutsack...",
+    "gawk gawk 420 slurpmaster surpreme",
+    "ATTENTION! GROUP MASTURBATION STARTS IN 5 MINUTES!",
+    "OMG I'M LATE FOR GROUP MASTURBATION!"
 ]
 let cm2 = [
     'Cock and Ball Torture',
@@ -31,7 +36,10 @@ let cm2 = [
     'Cum rag Crawling across the floor',
     'Steping away from urinal while peeing and still make it in',
     'Sex',
-    'Holloweiner Blumpkin'
+    'Holloweiner Blumpkin',
+    'gawk gawk 420 slurpmaster surpreme',
+    "Ball Busting",
+    "Group Masturbation"
 ]
 //funny messages
 const amount = 1e3,
@@ -74,14 +82,23 @@ updateDataMap(singiture)
 function player(id = 0, name = "BOT", clr = 'purple') {
     let gfe = false;
     let q_obj = {
-            name: arab ? '﷽'.repeat(17) : name, //+ `[${id}]`,
+            name: arab ? '﷽'.repeat(5) : name, //+ `[${id}]`,
             characterId: arab ? 'yellow' : clr
         },
         query = Object.entries(q_obj);
     if (!isFinite(gameId)) query.unshift(['gameId', gameId]);
 
 
-    let ws = new WebSocket(murl + query.map(e => e.join `=`).join `&`)
+    let ws = new WebSocket(murl + query.map(e => e.join `=`).join `&`,{
+        headers: {
+            Connection: 'Upgrade',
+            Host: "game.witz.io",
+            Origin: 'https://Witz.io',
+            Pargma: 'no-cache',
+            Upgrade: 'websocket',
+            "User-Agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36'
+        }
+    })
     ws.s = ws.send;
     ws.send = arr => ws.s(new Uint8Array(arr));
     ws.on('open', () => {
@@ -97,7 +114,7 @@ function player(id = 0, name = "BOT", clr = 'purple') {
                 ws.send([...datamap.get('submit2'), ...cmsg, 0, 0, 0])
 
                 ws.send(datamap.get('vote'))
-            }, 5e3);
+            },5e3);
         } else {
             let wait = rand(10e3, 40e3)
             setInterval(() => {
